@@ -4,7 +4,8 @@
   "description": "Apple HIG Design Intelligence — 6 specialized agents, 42 design topics, spring physics, video analysis. One command: /onemore",
   "main": "scripts/search.py",
   "bin": {
-    "onemore": "./bin/onemore.js"
+    "onemore": "./bin/onemore.js",
+    "onemore-design": "./bin/onemore.js"
   },
   "scripts": {
     "test": "python3 -m pytest tests/ -v"

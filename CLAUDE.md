@@ -6,7 +6,7 @@ OneMore is an Apple Human Interface Guidelines (HIG) design intelligence skill f
 
 **Repo:** https://github.com/JubaKitiashvili/onemore
 **Live site:** https://jubakitiashvili.github.io/onemore/
-**Status:** v1.0.0 — core complete, visual polish in progress
+**Status:** v2.3.0 — core complete, visual polish in progress
 
 ## Tech Stack
 

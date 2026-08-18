@@ -10,13 +10,13 @@
   :root {
     --accent: #34C759;
     --accent-glow: rgba(52, 199, 89, 0.3);
-    --bg-dark: #000;
+    --bg-dark: #1d1d1f;
     --bg-light: #fbfbfd;
     --text-dark: #f5f5f7;
     --text-light: #1d1d1f;
     --secondary: #86868b;
     --card-dark: #1c1c1e;
-    --card-light: #fff;
+    --card-light: #fbfbfd;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
   }
 
@@ -75,9 +75,12 @@
 
   .nav-cta {
     background: var(--text-light);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 8px 18px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     border-radius: 980px;
     font-size: 13px;
     font-weight: 500;
@@ -172,7 +175,7 @@
 
   .btn-primary {
     background: var(--text-light);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 16px 32px;
     border-radius: 12px;
@@ -190,7 +193,7 @@
 
   .btn-accent {
     background: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 16px 32px;
     border-radius: 12px;
@@ -581,7 +584,7 @@
 
   .tier-name { font-size: 22px; font-weight: 800; color: rgba(255,255,255,0.95); margin-bottom: 4px; }
   .tier-sub { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
-  .tier-price { font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 20px; }
+  .tier-price { font-size: 32px; font-weight: 700; color: #fbfbfd; margin-bottom: 20px; }
   .tier-price small { font-size: 14px; font-weight: 400; opacity: 0.7; }
 
   .tier-features { list-style: none; }
@@ -764,8 +767,8 @@
           <div class="balance-change">+$1,240 (5.3%) this month</div>
         </div>
         <div style="display:flex;gap:12px;">
-          <button style="background:var(--accent);color:#fff;border:none;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);">Send Money</button>
-          <button style="background:rgba(0,0,0,0.06);color:var(--text-light);border:none;padding:10px 20px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);">Add Funds</button>
+          <button style="background:var(--accent);color:#fbfbfd;border:none;padding:10px 20px;min-height:44px;display:inline-flex;align-items:center;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);">Send Money</button>
+          <button style="background:rgba(0,0,0,0.06);color:var(--text-light);border:none;padding:10px 20px;min-height:44px;display:inline-flex;align-items:center;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);">Add Funds</button>
         </div>
       </div>
 
