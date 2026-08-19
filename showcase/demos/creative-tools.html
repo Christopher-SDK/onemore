@@ -21,7 +21,7 @@
   --text-light: #f5f5f7;
   --text-dark: #1d1d1f;
   --text-secondary: #86868b;
-  --bg-dark: #000000;
+  --bg-dark: #1d1d1f;
   --bg-light: #fbfbfd;
   --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
   --section-pad: 120px;
@@ -151,8 +151,11 @@ a {
 
 .nav-cta {
   background: var(--purple);
-  color: #fff !important;
+  color: #fbfbfd !important;
   padding: 6px 18px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 980px;
   font-size: 14px;
   font-weight: 500;
@@ -234,7 +237,7 @@ a {
   letter-spacing: -0.04em;
   line-height: 1.04;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 40%, #fff 80%);
+  background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 40%, #fbfbfd 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -259,7 +262,7 @@ a {
   align-items: center;
   gap: 8px;
   background: var(--purple);
-  color: #fff;
+  color: #fbfbfd;
   padding: 14px 32px;
   border-radius: var(--radius-btn);
   font-size: 17px;
@@ -277,7 +280,7 @@ a {
   inset: 0;
   background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
   background-size: 200% 100%;
-  animation: shimmer 3s ease-in-out infinite;
+  animation: shimmer 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
 @keyframes shimmer {
@@ -455,7 +458,7 @@ a {
   height: calc(100% + 8px);
   background: #FF375F;
   z-index: 10;
-  animation: playheadMove 8s ease-in-out infinite alternate;
+  animation: playheadMove 8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
 }
 
 .playhead::before {
@@ -615,7 +618,7 @@ a {
   position: absolute;
   width: 8px;
   height: 8px;
-  background: #fff;
+  background: #fbfbfd;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -828,7 +831,7 @@ a {
 }
 
 .tool-btn.active svg {
-  stroke: #fff;
+  stroke: #fbfbfd;
 }
 
 .design-canvas {
@@ -948,7 +951,7 @@ a {
 }
 
 .feature-card {
-  background: #fff;
+  background: #fbfbfd;
   border-radius: var(--radius-card);
   padding: 36px 28px;
   text-align: left;
@@ -975,7 +978,7 @@ a {
 .feature-icon svg {
   width: 22px;
   height: 22px;
-  stroke: #fff;
+  stroke: #fbfbfd;
   fill: none;
   stroke-width: 1.5;
 }
@@ -1056,7 +1059,7 @@ a {
 .pricing-badge {
   display: inline-block;
   background: var(--purple);
-  color: #fff;
+  color: #fbfbfd;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -1130,7 +1133,7 @@ a {
 
 .pricing-btn-primary {
   background: var(--purple);
-  color: #fff;
+  color: #fbfbfd;
 }
 
 .pricing-btn-primary:hover {

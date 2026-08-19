@@ -13,8 +13,8 @@
     --text-primary: #1d1d1f;
     --text-secondary: #86868b;
     --bg: #fbfbfd;
-    --bg-alt: #000;
-    --card-bg: #fff;
+    --bg-alt: #1d1d1f;
+    --card-bg: #fbfbfd;
     --card-border: rgba(0,0,0,0.07);
     --card-radius: 22px;
     --btn-radius: 12px;
@@ -25,7 +25,7 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --text-primary: #f5f5f7;
-      --bg: #000;
+      --bg: #1d1d1f;
       --bg-alt: #111113;
       --card-bg: #1c1c1e;
       --card-border: rgba(255,255,255,0.07);
@@ -59,8 +59,9 @@
   .nav-links a { font-size: 14px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text-primary); }
   .nav-cta {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
-    padding: 8px 18px; border-radius: var(--btn-radius); font-size: 14px; font-weight: 600;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
+    padding: 8px 18px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: var(--btn-radius); font-size: 14px; font-weight: 600;
     transition: opacity 0.2s, transform 0.2s;
   }
   .nav-cta:hover { opacity: 0.85; transform: scale(1.02); }
@@ -96,7 +97,7 @@
   }
 
   .btn-primary {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
     padding: 14px 28px; border-radius: var(--btn-radius); font-size: 17px; font-weight: 600;
     transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 20px rgba(255,149,0,0.4);
@@ -127,8 +128,9 @@
   }
   .search-input::placeholder { color: var(--text-secondary); }
   .search-btn {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
-    padding: 10px 22px; border-radius: 12px; font-size: 15px; font-weight: 600;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
+    padding: 10px 22px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: 12px; font-size: 15px; font-weight: 600;
     transition: opacity 0.2s; white-space: nowrap;
   }
   .search-btn:hover { opacity: 0.88; }
@@ -145,7 +147,7 @@
   .cuisine-disc {
     width: 72px; height: 72px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 22px; font-weight: 700; color: #fff;
+    font-size: 22px; font-weight: 700; color: #fbfbfd;
     transition: transform 0.2s cubic-bezier(0.25,0.1,0.25,1), box-shadow 0.2s;
     position: relative; overflow: hidden;
   }
@@ -193,12 +195,12 @@
   }
   .delivery-badge {
     position: absolute; top: 12px; right: 12px;
-    background: rgba(0,0,0,0.65); color: #fff; font-size: 12px; font-weight: 600;
+    background: rgba(0,0,0,0.65); color: #fbfbfd; font-size: 12px; font-weight: 600;
     padding: 4px 10px; border-radius: 100px; backdrop-filter: blur(8px);
   }
   .promo-badge {
     position: absolute; top: 12px; left: 12px;
-    background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
+    background: var(--accent); color: #fbfbfd; font-size: 11px; font-weight: 700;
     padding: 4px 10px; border-radius: 100px;
   }
   .restaurant-body { padding: 18px 20px; }
@@ -237,7 +239,7 @@
     width: 72px; height: 72px; border-radius: 50%;
     background: linear-gradient(135deg, var(--accent), #FF6B00);
     display: flex; align-items: center; justify-content: center;
-    font-size: 26px; font-weight: 700; color: #fff; margin: 0 auto 24px;
+    font-size: 26px; font-weight: 700; color: #fbfbfd; margin: 0 auto 24px;
     box-shadow: 0 8px 30px rgba(255,149,0,0.4); position: relative; z-index: 1;
   }
   .step-item h3 { font-size: 19px; font-weight: 600; color: #f5f5f7; margin-bottom: 10px; }
@@ -263,8 +265,8 @@
   .dish-footer { display: flex; align-items: center; justify-content: space-between; }
   .dish-price { font-size: 15px; font-weight: 700; }
   .add-btn {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
-    width: 32px; height: 32px; border-radius: 10px;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
+    width: 44px; height: 44px; border-radius: 14px;
     font-size: 20px; font-weight: 500; line-height: 1;
     display: flex; align-items: center; justify-content: center;
     transition: transform 0.15s, background 0.15s;
@@ -278,12 +280,12 @@
     background: linear-gradient(135deg, #FF9500 0%, #FF6B00 50%, #FF3B30 100%);
     text-align: center;
   }
-  .app-section h2 { font-size: clamp(36px,5vw,56px); font-weight: 700; letter-spacing: -1.5px; color: #fff; margin-bottom: 16px; opacity: 0; transform: translateY(30px); }
+  .app-section h2 { font-size: clamp(36px,5vw,56px); font-weight: 700; letter-spacing: -1.5px; color: #fbfbfd; margin-bottom: 16px; opacity: 0; transform: translateY(30px); }
   .app-section p { font-size: 19px; color: rgba(255,255,255,0.8); margin-bottom: 40px; opacity: 0; transform: translateY(30px); }
   .app-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; opacity: 0; transform: translateY(30px); }
   .app-btn {
     display: flex; align-items: center; gap: 12px;
-    background: rgba(0,0,0,0.25); color: #fff; border: 1.5px solid rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0.25); color: #fbfbfd; border: 1.5px solid rgba(255,255,255,0.4);
     padding: 12px 24px; border-radius: 14px; cursor: pointer;
     transition: background 0.2s, transform 0.2s; text-align: left;
     backdrop-filter: blur(10px);
@@ -293,7 +295,7 @@
   .app-btn-title { font-size: 17px; font-weight: 600; display: block; }
 
   footer {
-    background: #000; color: #86868b; text-align: center;
+    background: #1d1d1f; color: #86868b; text-align: center;
     padding: 48px 24px; font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }

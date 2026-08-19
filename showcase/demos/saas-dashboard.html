@@ -22,8 +22,8 @@
   --text-light: #f5f5f7;
   --text-secondary: #86868b;
   --bg-light: #fbfbfd;
-  --bg-dark: #000000;
-  --bg-card: #ffffff;
+  --bg-dark: #1d1d1f;
+  --bg-card: #fbfbfd;
   --bg-nav-light: rgba(251, 251, 253, 0.72);
   --bg-nav-dark: rgba(0, 0, 0, 0.72);
   --accent: #5856D6;
@@ -88,7 +88,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #a78bfa 50%, #5856D6 100%);
+  background: linear-gradient(135deg, #fbfbfd 0%, #a78bfa 50%, #5856D6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -96,7 +96,7 @@ body {
 
 /* Feature icon pulse (after reveal) */
 .feature-icon-wrap.revealed .feature-icon {
-  animation: iconPulse 3s ease-in-out infinite;
+  animation: iconPulse 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
 @keyframes iconPulse {
@@ -128,7 +128,7 @@ body {
   border-radius: 22px;
   background: conic-gradient(from var(--glow-angle, 0deg), #5856D6, #a78bfa, #c084fc, #5856D6);
   z-index: -1;
-  animation: glow-rotate 4s linear infinite;
+  animation: glow-rotate 4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
   opacity: 0.8;
 }
 
@@ -201,6 +201,10 @@ body {
   .pricing-card:hover {
     transform: none;
   }
+  .hero-mockup-scale {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ========== NAVIGATION ========== */
@@ -246,6 +250,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   color: var(--text-secondary);
+  cursor: pointer;
   transition: color 0.2s var(--ease);
 }
 
@@ -256,13 +261,16 @@ body {
 .nav-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 44px;
   padding: 7px 18px;
   background: var(--accent);
-  color: #fff !important;
+  color: #fbfbfd !important;
   border-radius: 980px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.2s var(--ease), transform 0.2s var(--ease);
 }
 
@@ -334,7 +342,7 @@ body {
   align-items: center;
   padding: 14px 32px;
   background: var(--accent);
-  color: #fff;
+  color: #fbfbfd;
   border-radius: 980px;
   font-size: 17px;
   font-weight: 600;
@@ -974,7 +982,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: var(--accent);
-  color: #fff;
+  color: #fbfbfd;
   font-size: 12px;
   font-weight: 600;
   padding: 4px 16px;
@@ -1055,7 +1063,7 @@ body {
 
 .pricing-btn.primary {
   background: var(--accent);
-  color: #fff;
+  color: #fbfbfd;
 }
 
 .pricing-btn.primary:hover {
@@ -1092,7 +1100,7 @@ body {
   align-items: center;
   padding: 16px 40px;
   background: var(--accent);
-  color: #fff;
+  color: #fbfbfd;
   border-radius: 980px;
   font-size: 17px;
   font-weight: 600;
@@ -1130,6 +1138,7 @@ body {
 .footer-text a {
   color: var(--text-secondary);
   text-decoration: none;
+  cursor: pointer;
   margin: 0 8px;
 }
 

@@ -10,13 +10,13 @@
   :root {
     --accent: #FF2D55;
     --accent-glow: rgba(255, 45, 85, 0.3);
-    --bg-dark: #000;
+    --bg-dark: #1d1d1f;
     --bg-light: #fbfbfd;
     --text-dark: #f5f5f7;
     --text-light: #1d1d1f;
     --secondary: #86868b;
     --card-dark: #1c1c1e;
-    --card-light: #fff;
+    --card-light: #fbfbfd;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
   }
 
@@ -75,9 +75,12 @@
 
   .nav-cta {
     background: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 8px 18px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     border-radius: 980px;
     font-size: 13px;
     font-weight: 500;
@@ -136,7 +139,7 @@
     letter-spacing: -2px;
     line-height: 1.05;
     max-width: 780px;
-    background: linear-gradient(135deg, var(--accent) 0%, #fff 60%);
+    background: linear-gradient(135deg, var(--accent) 0%, #fbfbfd 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -167,7 +170,7 @@
 
   .btn-primary {
     background: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 16px 32px;
     border-radius: 12px;
@@ -526,7 +529,7 @@
   .phone-screen {
     width: 100%;
     height: 100%;
-    background: #000;
+    background: #1d1d1f;
     padding: 40px 16px 20px;
     display: flex;
     flex-direction: column;
@@ -582,7 +585,7 @@
   }
 
   .cta-section .section-title {
-    background: linear-gradient(135deg, var(--accent) 0%, #fff 60%);
+    background: linear-gradient(135deg, var(--accent) 0%, #fbfbfd 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -654,7 +657,7 @@
     width: 4px;
     border-radius: 2px;
     background: #0CD4F5;
-    animation: wavePulse 1.5s ease-in-out infinite;
+    animation: wavePulse 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
   }
 
   @keyframes wavePulse {

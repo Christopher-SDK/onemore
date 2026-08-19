@@ -12,7 +12,7 @@
     --accent-deep: #007AFF;
     --text-primary: #f5f5f7;
     --text-secondary: #86868b;
-    --bg: #000;
+    --bg: #1d1d1f;
     --bg-light: #fbfbfd;
     --card-radius: 22px;
     --btn-radius: 12px;
@@ -52,8 +52,9 @@
   .nav-links a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: #f5f5f7; }
   .nav-cta {
-    background: var(--accent); color: #000; border: none; cursor: pointer;
-    padding: 8px 18px; border-radius: var(--btn-radius); font-size: 14px; font-weight: 700;
+    background: var(--accent); color: #1d1d1f; border: none; cursor: pointer;
+    padding: 8px 18px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: var(--btn-radius); font-size: 14px; font-weight: 700;
     transition: opacity 0.2s, transform 0.2s;
   }
   .nav-cta:hover { opacity: 0.85; }
@@ -65,7 +66,7 @@
     padding: 120px 24px 80px;
     background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(90,200,250,0.15) 0%, transparent 70%),
                 radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,122,255,0.12) 0%, transparent 60%),
-                #000;
+                #1d1d1f;
     position: relative; overflow: hidden;
   }
   .hero::before {
@@ -85,7 +86,7 @@
   h1 {
     font-size: clamp(52px, 8vw, 96px); font-weight: 700;
     letter-spacing: -3px; line-height: 1.0; margin-bottom: 24px;
-    background: linear-gradient(135deg, #fff 0%, var(--accent) 60%, var(--accent-deep) 100%);
+    background: linear-gradient(135deg, #fbfbfd 0%, var(--accent) 60%, var(--accent-deep) 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     opacity: 0; transform: translateY(30px);
   }
@@ -113,12 +114,12 @@
   .pill-label { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 2px; }
   .pill-input {
     background: transparent; border: none; outline: none;
-    font-family: inherit; font-size: 15px; color: #fff; width: 100%;
+    font-family: inherit; font-size: 15px; color: #fbfbfd; width: 100%;
   }
   .pill-input::placeholder { color: rgba(255,255,255,0.4); }
   .search-btn {
     background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-    color: #fff; border: none; cursor: pointer;
+    color: #fbfbfd; border: none; cursor: pointer;
     padding: 16px 32px; border-radius: 16px; font-size: 16px; font-weight: 700;
     transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 24px rgba(90,200,250,0.35);
@@ -168,11 +169,11 @@
   .dest-content { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; }
   .dest-rating {
     display: inline-flex; align-items: center; gap: 4px;
-    background: rgba(0,0,0,0.4); color: #fff; font-size: 13px; font-weight: 600;
+    background: rgba(0,0,0,0.4); color: #fbfbfd; font-size: 13px; font-weight: 600;
     padding: 4px 10px; border-radius: 100px; margin-bottom: 10px;
     backdrop-filter: blur(8px);
   }
-  .dest-city { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+  .dest-city { font-size: 24px; font-weight: 700; color: #fbfbfd; margin-bottom: 2px; }
   .dest-country { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 12px; }
   .dest-price { font-size: 15px; font-weight: 600; color: var(--accent); }
   .dest-price span { font-size: 13px; color: rgba(255,255,255,0.5); font-weight: 400; }
@@ -202,7 +203,7 @@
   .host-avatar {
     width: 36px; height: 36px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 15px; font-weight: 700; color: #fff;
+    font-size: 15px; font-weight: 700; color: #fbfbfd;
     flex-shrink: 0; border: 2px solid rgba(90,200,250,0.3);
   }
   .host-info-name { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.9); }
@@ -251,7 +252,7 @@
   .t-avatar {
     width: 44px; height: 44px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 18px; font-weight: 700; color: #fff;
+    font-size: 18px; font-weight: 700; color: #fbfbfd;
   }
   .t-name { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.9); }
   .t-role { font-size: 13px; color: rgba(255,255,255,0.4); }
@@ -260,13 +261,13 @@
   .cta-section {
     background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(90,200,250,0.18) 0%, transparent 70%),
                 radial-gradient(ellipse 60% 40% at 80% 100%, rgba(0,122,255,0.15) 0%, transparent 60%),
-                #000;
+                #1d1d1f;
     text-align: center;
     border-top: 1px solid rgba(90,200,250,0.1);
   }
   .cta-section h2 {
     font-size: clamp(36px,5vw,56px); font-weight: 700; letter-spacing: -1.5px;
-    background: linear-gradient(135deg, #fff, var(--accent));
+    background: linear-gradient(135deg, #fbfbfd, var(--accent));
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     margin-bottom: 20px; opacity: 0; transform: translateY(30px);
   }
@@ -274,14 +275,14 @@
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; opacity: 0; transform: translateY(30px); }
   .btn-teal {
     background: linear-gradient(135deg, var(--accent), var(--accent-deep));
-    color: #fff; border: none; cursor: pointer;
+    color: #fbfbfd; border: none; cursor: pointer;
     padding: 14px 32px; border-radius: var(--btn-radius); font-size: 17px; font-weight: 700;
     box-shadow: 0 4px 24px rgba(90,200,250,0.35);
     transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
   }
   .btn-teal:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 36px rgba(90,200,250,0.45); }
   .btn-glass {
-    background: rgba(255,255,255,0.08); color: #fff;
+    background: rgba(255,255,255,0.08); color: #fbfbfd;
     border: 1.5px solid rgba(255,255,255,0.15); cursor: pointer;
     padding: 14px 32px; border-radius: var(--btn-radius); font-size: 17px; font-weight: 500;
     backdrop-filter: blur(10px);
@@ -290,7 +291,7 @@
   .btn-glass:hover { background: rgba(255,255,255,0.14); transform: translateY(-2px); }
 
   footer {
-    background: #000; color: rgba(255,255,255,0.3); text-align: center;
+    background: #1d1d1f; color: rgba(255,255,255,0.3); text-align: center;
     padding: 48px 24px; font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.05);
   }

@@ -13,8 +13,8 @@
     --text-primary: #1d1d1f;
     --text-secondary: #86868b;
     --bg: #fbfbfd;
-    --bg-alt: #000;
-    --card-bg: #fff;
+    --bg-alt: #1d1d1f;
+    --card-bg: #fbfbfd;
     --card-border: rgba(0,0,0,0.07);
     --card-radius: 22px;
     --btn-radius: 12px;
@@ -25,7 +25,7 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --text-primary: #f5f5f7;
-      --bg: #000;
+      --bg: #1d1d1f;
       --bg-alt: #111113;
       --card-bg: #1c1c1e;
       --card-border: rgba(255,255,255,0.07);
@@ -59,8 +59,9 @@
   .nav-links a { font-size: 14px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--text-primary); }
   .nav-cta {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
-    padding: 8px 18px; border-radius: var(--btn-radius); font-size: 14px; font-weight: 500;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
+    padding: 8px 18px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: var(--btn-radius); font-size: 14px; font-weight: 500;
     transition: opacity 0.2s, transform 0.2s;
   }
   .nav-cta:hover { opacity: 0.85; }
@@ -98,7 +99,7 @@
     opacity: 0; transform: translateY(30px);
   }
   .btn-primary {
-    background: var(--accent); color: #fff; border: none; cursor: pointer;
+    background: var(--accent); color: #fbfbfd; border: none; cursor: pointer;
     padding: 14px 26px; border-radius: var(--btn-radius); font-size: 16px; font-weight: 500;
     transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 4px 20px rgba(0,122,255,0.35);
@@ -139,7 +140,7 @@
   .task-check.done { background: var(--accent); border-color: var(--accent); }
   .task-check.done::after {
     content: ''; width: 10px; height: 6px;
-    border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+    border-left: 2px solid #fbfbfd; border-bottom: 2px solid #fbfbfd;
     transform: rotate(-45deg) translateY(-1px); display: block;
   }
   .task-text { font-size: 14px; flex: 1; }
@@ -209,7 +210,7 @@
   .kcard-avatar {
     width: 24px; height: 24px; border-radius: 50%; background: var(--accent);
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 700; color: #fff;
+    font-size: 11px; font-weight: 700; color: #fbfbfd;
   }
 
   /* FEATURES */
@@ -273,35 +274,35 @@
   .plan-name { font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
   .pricing-card.featured .plan-name { color: rgba(255,255,255,0.7); }
   .plan-price { font-size: 52px; font-weight: 700; letter-spacing: -2px; margin-bottom: 6px; }
-  .pricing-card.featured .plan-price { color: #fff; }
+  .pricing-card.featured .plan-price { color: #fbfbfd; }
   .plan-price span { font-size: 20px; vertical-align: super; margin-right: 2px; }
   .plan-period { font-size: 14px; color: var(--text-secondary); margin-bottom: 28px; }
   .pricing-card.featured .plan-period { color: rgba(255,255,255,0.6); }
   .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
   .plan-features li { font-size: 15px; display: flex; align-items: center; gap: 10px; }
-  .pricing-card.featured .plan-features li { color: #fff; }
+  .pricing-card.featured .plan-features li { color: #fbfbfd; }
   .check-icon { width: 18px; height: 18px; flex-shrink: 0; }
 
   /* DOWNLOAD CTA */
   .cta-section { background: linear-gradient(135deg, #007AFF 0%, #34AADC 100%); text-align: center; }
-  .cta-section h2 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: -1.5px; color: #fff; margin-bottom: 20px; opacity: 0; transform: translateY(30px); }
+  .cta-section h2 { font-size: clamp(36px, 5vw, 56px); font-weight: 700; letter-spacing: -1.5px; color: #fbfbfd; margin-bottom: 20px; opacity: 0; transform: translateY(30px); }
   .cta-section p { font-size: 19px; color: rgba(255,255,255,0.75); margin-bottom: 40px; opacity: 0; transform: translateY(30px); }
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; opacity: 0; transform: translateY(30px); }
   .btn-white {
-    background: #fff; color: var(--accent); border: none; cursor: pointer;
+    background: #fbfbfd; color: var(--accent); border: none; cursor: pointer;
     padding: 14px 28px; border-radius: var(--btn-radius); font-size: 16px; font-weight: 600;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
   .btn-outline-white {
-    background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.6); cursor: pointer;
+    background: transparent; color: #fbfbfd; border: 1.5px solid rgba(255,255,255,0.6); cursor: pointer;
     padding: 14px 28px; border-radius: var(--btn-radius); font-size: 16px; font-weight: 500;
     transition: background 0.2s, transform 0.2s;
   }
   .btn-outline-white:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); }
 
   footer {
-    background: #000; color: #86868b; text-align: center;
+    background: #1d1d1f; color: #86868b; text-align: center;
     padding: 48px 24px; font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
@@ -576,7 +577,7 @@
           <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Custom views</li>
           <li><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Priority support</li>
         </ul>
-        <button class="btn-white" style="background: #fff; color: #007AFF; border: none; cursor: pointer; padding: 14px 26px; border-radius: 12px; font-size: 16px; font-weight: 600; width: 100%; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Start Pro Trial</button>
+        <button class="btn-white" style="background: #fbfbfd; color: #007AFF; border: none; cursor: pointer; padding: 14px 26px; border-radius: 12px; font-size: 16px; font-weight: 600; width: 100%; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">Start Pro Trial</button>
       </div>
     </div>
   </div>

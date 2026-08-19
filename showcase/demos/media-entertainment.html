@@ -11,13 +11,13 @@
     --accent: #AF52DE;
     --accent-pink: #FF375F;
     --accent-glow: rgba(175, 82, 222, 0.35);
-    --bg-dark: #000;
+    --bg-dark: #1d1d1f;
     --bg-light: #fbfbfd;
     --text-dark: #f5f5f7;
     --text-light: #1d1d1f;
     --secondary: #86868b;
     --card-dark: #1c1c1e;
-    --card-light: #fff;
+    --card-light: #fbfbfd;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
   }
 
@@ -47,8 +47,9 @@
   .nav-links a:hover { color: var(--text-dark); }
 
   .nav-cta {
-    background: var(--accent); color: #fff; border: none;
-    padding: 8px 18px; border-radius: 980px; font-size: 13px; font-weight: 500;
+    background: var(--accent); color: #fbfbfd; border: none;
+    padding: 8px 18px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: 980px; font-size: 13px; font-weight: 500;
     cursor: pointer; font-family: var(--font); transition: opacity 200ms, transform 200ms;
   }
   .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
@@ -95,7 +96,7 @@
   }
 
   .btn-primary {
-    background: var(--accent); color: #fff; border: none;
+    background: var(--accent); color: #fbfbfd; border: none;
     padding: 16px 32px; border-radius: 12px; font-size: 17px; font-weight: 600;
     cursor: pointer; font-family: var(--font); transition: transform 200ms, box-shadow 200ms;
   }
@@ -197,7 +198,7 @@
 
   .player-heart {
     background: transparent; border: none; cursor: pointer;
-    color: var(--accent); padding: 4px; display: flex; align-items: center; justify-content: center;
+    color: var(--accent); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
   }
 
   /* Progress */
@@ -228,14 +229,14 @@
   .ctrl-btn {
     background: transparent; border: none; cursor: pointer; color: var(--secondary);
     display: flex; align-items: center; justify-content: center;
-    transition: color 200ms, transform 200ms; padding: 4px;
+    transition: color 200ms, transform 200ms; width: 44px; height: 44px;
   }
 
   .ctrl-btn:hover { color: var(--text-dark); transform: scale(1.1); }
 
   .ctrl-btn.play-btn {
     width: 56px; height: 56px; border-radius: 50%;
-    background: var(--accent); color: #fff;
+    background: var(--accent); color: #fbfbfd;
     box-shadow: 0 8px 24px var(--accent-glow);
     transition: transform 200ms, box-shadow 200ms;
   }
@@ -264,14 +265,15 @@
   }
 
   .cat-pill {
-    padding: 10px 20px; border-radius: 980px;
+    padding: 10px 20px; min-height: 44px; display: inline-flex; align-items: center;
+    border-radius: 980px;
     border: 1.5px solid rgba(0,0,0,0.1);
     font-size: 14px; font-weight: 500; cursor: pointer;
     transition: all 200ms; background: transparent;
     font-family: var(--font); color: var(--text-light);
   }
 
-  .cat-pill:hover, .cat-pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .cat-pill:hover, .cat-pill.active { background: var(--accent); border-color: var(--accent); color: #fbfbfd; }
 
   .albums-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
@@ -362,14 +364,14 @@
   .pricing-card.featured {
     background: var(--accent);
     border-color: transparent;
-    color: #fff;
+    color: #fbfbfd;
   }
 
   .pricing-card.featured:hover { box-shadow: 0 20px 50px var(--accent-glow); }
 
   .pricing-badge {
     position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--accent-pink); color: #fff;
+    background: var(--accent-pink); color: #fbfbfd;
     font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
     padding: 4px 12px; border-radius: 980px;
   }
@@ -412,11 +414,11 @@
   }
 
   .pricing-card:not(.featured) .pricing-btn {
-    background: var(--text-light); color: #fff;
+    background: var(--text-light); color: #fbfbfd;
   }
 
   .pricing-card.featured .pricing-btn {
-    background: #fff; color: var(--accent);
+    background: #fbfbfd; color: var(--accent);
   }
 
   .pricing-btn:hover { transform: translateY(-2px); opacity: 0.9; }
@@ -464,25 +466,25 @@
   <div class="album-art-grid" id="hero-visual">
     <div class="album-art-hero" style="background:linear-gradient(135deg,#AF52DE 0%,#FF375F 100%);">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#fff;opacity:0.9;">Neon Dreams</div>
+        <div style="font-size:12px;font-weight:700;color:#fbfbfd;opacity:0.9;">Neon Dreams</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.6);">Prism Originals</div>
       </div>
     </div>
     <div class="album-art-hero" style="background:linear-gradient(135deg,#0f3460 0%,#533483 100%);margin-top:20px;">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#fff;opacity:0.9;">Midnight Low</div>
+        <div style="font-size:12px;font-weight:700;color:#fbfbfd;opacity:0.9;">Midnight Low</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.6);">Electric Era</div>
       </div>
     </div>
     <div class="album-art-hero" style="background:linear-gradient(135deg,#c94b4b 0%,#FF9500 100%);">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#fff;opacity:0.9;">Sunrise Drive</div>
+        <div style="font-size:12px;font-weight:700;color:#fbfbfd;opacity:0.9;">Sunrise Drive</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.6);">Nova &amp; The Tides</div>
       </div>
     </div>
     <div class="album-art-hero" style="background:linear-gradient(135deg,#134e5e 0%,#71b280 100%);margin-top:20px;">
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;">
-        <div style="font-size:12px;font-weight:700;color:#fff;opacity:0.9;">Forest Rain</div>
+        <div style="font-size:12px;font-weight:700;color:#fbfbfd;opacity:0.9;">Forest Rain</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.6);">Ambient Select</div>
       </div>
     </div>
@@ -542,7 +544,7 @@
           </svg>
         </button>
         <button class="ctrl-btn play-btn" id="play-btn">
-          <svg id="play-icon" width="22" height="22" viewBox="0 0 24 24" fill="white">
+          <svg id="play-icon" width="22" height="22" viewBox="0 0 24 24" fill="#fbfbfd">
             <polygon points="5 3 19 12 5 21 5 3"/>
           </svg>
         </button>

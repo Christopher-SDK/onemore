@@ -11,13 +11,13 @@
     --accent: #FF9500;
     --accent-warm: #FF6B00;
     --accent-glow: rgba(255, 149, 0, 0.3);
-    --bg-dark: #000;
+    --bg-dark: #1d1d1f;
     --bg-light: #fbfbfd;
     --text-dark: #f5f5f7;
     --text-light: #1d1d1f;
     --secondary: #86868b;
     --card-dark: #1c1c1e;
-    --card-light: #fff;
+    --card-light: #fbfbfd;
     --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
   }
 
@@ -81,6 +81,8 @@
     border: none;
     cursor: pointer;
     padding: 4px;
+    min-width: 44px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +94,7 @@
     width: 18px; height: 18px;
     border-radius: 50%;
     background: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
     font-size: 11px;
     font-weight: 700;
     display: flex;
@@ -192,7 +194,7 @@
 
   .btn-primary {
     background: var(--text-light);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 16px 32px;
     border-radius: 12px;
@@ -207,7 +209,7 @@
 
   .btn-accent {
     background: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 16px 32px;
     border-radius: 12px;
@@ -255,7 +257,7 @@
     bottom: 0; left: 0; right: 0;
     padding: 16px;
     background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: #fff;
+    color: #fbfbfd;
     font-size: 13px;
     font-weight: 600;
   }
@@ -317,7 +319,7 @@
   .product-img .wishlist-btn {
     position: absolute;
     top: 12px; right: 12px;
-    width: 34px; height: 34px;
+    width: 44px; height: 44px;
     border-radius: 50%;
     background: rgba(255,255,255,0.9);
     border: none;
@@ -356,9 +358,13 @@
 
   .add-to-cart {
     background: var(--text-light);
-    color: #fff;
+    color: #fbfbfd;
     border: none;
     padding: 8px 16px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 980px;
     font-size: 13px;
     font-weight: 600;
@@ -384,6 +390,9 @@
 
   .category-pill {
     padding: 12px 24px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     border-radius: 980px;
     border: 1.5px solid rgba(255,255,255,0.15);
     color: var(--text-dark);
@@ -398,7 +407,7 @@
   .category-pill:hover, .category-pill.active {
     background: var(--accent);
     border-color: var(--accent);
-    color: #fff;
+    color: #fbfbfd;
   }
 
   /* PRODUCT SHOWCASE */
@@ -507,7 +516,7 @@
     border: 1.5px solid rgba(0,0,0,0.12);
     font-size: 15px;
     font-family: var(--font);
-    background: #fff;
+    background: #fbfbfd;
     color: var(--text-light);
     outline: none;
     transition: border-color 200ms;
@@ -522,7 +531,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(100px);
     background: var(--text-light);
-    color: #fff;
+    color: #fbfbfd;
     padding: 14px 24px;
     border-radius: 12px;
     font-size: 15px;
