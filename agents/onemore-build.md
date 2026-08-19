@@ -18,14 +18,22 @@ Before writing any code, read the relevant rule files from the project root:
 4. **`docs/visual-rules.md`** — SVG illustrations, CSS gradient art, Canvas generative graphics, SVG filters/textures, CSS device mockups, placeholder system for photos
 5. **`docs/icons-rules.md`** — 70+ inline SVG icons, component system, feature icon patterns. NEVER use emoji or keyboard symbols as icons
 6. **`docs/patterns-rules.md`** — Liquid Glass material (CSS approximation), navigation (tab bar, nav bar, sidebar), modality (sheets, alerts, popovers, action sheets), loading states
+7. **`docs/responsive-rules.md`** — 3-breakpoint system (375/768/1280px), grid columns, fluid typography with clamp(), hamburger menu, sticky header, touch targets per breakpoint
+8. **`docs/images-rules.md`** — WebP+fallback strategy, aspect ratios by section, srcset/retina, art direction per breakpoint, lazy loading, placeholder blur-up/skeleton, alt text rules
+9. **`docs/multipage-rules.md`** — Site architecture (Tier 2 & 3), sticky navbar with dropdown, breadcrumbs, multi-column footer, contact form with real-time validation, SEO meta per page, page transitions
+10. **`docs/business-patterns-rules.md`** — Industry-specific sections, palettes, and components for: restaurants, dental clinics, consultancies, gyms, salons, law firms, real estate, medical centers, education, and hotels
 
 Match to the task:
-- **Landing page / full build** → read all four
+- **Landing page / full build** → read all 10 files
 - **Fix a component** → read design-system-rules.md + relevant craft sections
 - **Add animation** → read animation-rules.md + craft sections 1-3
 - **Style/color work** → read design-system-rules.md sections 1-3, 7
 - **Visual elements needed** → read visual-rules.md (SVG, gradients, Canvas, mockups)
 - **Navigation / modals / Liquid Glass** → read patterns-rules.md
+- **Responsive layout issues** → read responsive-rules.md
+- **Image optimization** → read images-rules.md
+- **Multi-page site** → read multipage-rules.md
+- **Client business site** → read business-patterns-rules.md + identify industry
 
 ## Working with a Creative Brief
 

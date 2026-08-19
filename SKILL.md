@@ -21,6 +21,35 @@ When the user invokes `/onemore`, classify their intent and dispatch the right a
 
 IMPORTANT: Use TaskCreate for every pipeline step to show visual progress in the terminal. Each task MUST have an `activeForm` for the spinner text.
 
+### Real-time Dashboard Integration
+
+At EVERY pipeline stage transition, write the current state to `~/.claude/onemore-status.json` using Bash. This feeds the live visual dashboard at http://localhost:7842.
+
+Write this JSON at each stage (replace values accordingly):
+```bash
+cat > ~/.claude/onemore-status.json << 'EOF'
+{
+  "active": "vision",
+  "stage": "Generando brief creativo",
+  "message": "Analizando el prompt y construyendo la visión del producto...",
+  "pipeline": ["vision","build","review"],
+  "completed": [],
+  "timestamp": "TIMESTAMP"
+}
+EOF
+```
+
+Valid values for `"active"`: `"idle"`, `"vision"`, `"build"`, `"review"`, `"animate"`, `"a11y"`, `"analyze"`
+
+Example sequence for Route 1 (Build from Scratch):
+1. Before vision:  active="vision",  completed=[]
+2. Before build:   active="build",   completed=["vision"]
+3. Before review:  active="review",  completed=["vision","build"]
+4. When done:      active="idle",    completed=["vision","build","review"]
+
+Write the JSON BEFORE dispatching each agent (so the dashboard updates immediately).
+Use Bash tool to write the file — it must be a single shell command with heredoc as shown above.
+
 ### Task Pattern for Each Route
 
 For **Build from Scratch** (vision → build → review):
@@ -172,11 +201,20 @@ Same as Route 1, but the vision agent also reads the existing code to understand
 | Agent | File | Knowledge | Role |
 |-------|------|-----------|------|
 | `onemore-vision` | `agents/onemore-vision.md` | vision-rules.md | Creative brief from vague prompts |
-| `onemore-build` | `agents/onemore-build.md` | craft + design-system + animation rules | Implementation |
+| `onemore-build` | `agents/onemore-build.md` | craft + design-system + animation + responsive + images + multipage + business rules | Implementation |
 | `onemore-animate` | `agents/onemore-animate.md` | animation-rules + craft sections 1-3, 7 | Motion specialist |
 | `onemore-review` | `agents/onemore-review.md` | All rules (checklists only) | Quality gate |
 | `onemore-a11y` | `agents/onemore-a11y.md` | design-system section 9, craft section 12 | Accessibility audit |
 | `onemore-analyze` | `agents/onemore-analyze.md` | Gemini API + OpenAI API (optional) + ffmpeg + motion analysis | Video reference → motion spec |
+
+### New Rule Files (v2.4.0)
+
+| File | Lines | Covers |
+|---|---|---|
+| `docs/responsive-rules.md` | ~400 | 3-breakpoint system (375/768/1280px), grids, clamp(), hamburger menu |
+| `docs/images-rules.md` | ~400 | WebP strategy, aspect ratios, lazy loading, srcset, blur-up placeholder |
+| `docs/multipage-rules.md` | ~500 | Site architecture, navbar dropdown, footer, forms, SEO meta, page transitions |
+| `docs/business-patterns-rules.md` | ~600 | 10 industries: restaurant, dental, consulting, gym, salon, law, real estate, medical, education, hotel |
 
 ---
 
