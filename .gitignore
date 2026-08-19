@@ -54,3 +54,5 @@ AGENTS.md
 .context-mem/
 .playwright-mcp/
 scripts/__pycache__/
+tests/__pycache__/
+**/__pycache__/

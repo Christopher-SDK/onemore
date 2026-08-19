@@ -2529,6 +2529,129 @@
       position: relative;
     }
 
+    /* ════════════════════════════════════════
+   FAQ
+   ════════════════════════════════════════ */
+    .faq {
+      background: var(--bg-light);
+      padding: 140px 24px 160px;
+      text-align: center;
+    }
+
+    .faq-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .faq-h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--text-dark);
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      min-height: 44px;
+      padding: 24px 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+      transition: color 0.3s var(--ease);
+    }
+
+    .faq-q:hover {
+      color: var(--accent);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      color: var(--text-dark-dim);
+      transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s var(--ease);
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      color: var(--accent);
+    }
+
+    .faq-item.open .faq-q {
+      color: var(--accent);
+    }
+
+    .faq-a {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+
+    .faq-item.open .faq-a {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-a-in {
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .faq-a-in p {
+      padding: 0 4px 24px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-dark-dim);
+      max-width: 640px;
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.35s var(--ease) 0.05s, transform 0.35s var(--ease) 0.05s;
+    }
+
+    .faq-item.open .faq-a-in p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .faq-icon,
+      .faq-a,
+      .faq-a-in p,
+      .faq-q {
+        transition: none !important;
+      }
+    }
+
     /* ── Footer ── */
     .ft {
       background: #f5f5f7;
@@ -3630,6 +3753,88 @@
 
     <!-- compat moved to after pitch -->
 
+    <!-- ═══ FAQ ═══ -->
+    <section class="faq" id="faq">
+      <p class="faq-eyebrow" data-r>Preguntas frecuentes</p>
+      <h2 class="faq-h2" data-r>Antes de que preguntes.</h2>
+      <div class="faq-list">
+        <div class="faq-item" data-r>
+          <button class="faq-q" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+            <span>¿Funciona sin API keys?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <div class="faq-a-in">
+              <p>Sí. El análisis de video usa ffmpeg integrado y gratuito por defecto — las API keys de Gemini u
+                OpenAI son opcionales, solo para mayor precisión.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-r>
+          <button class="faq-q" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+            <span>¿Funciona con Android/Material Design?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <div class="faq-a-in">
+              <p>Está en el roadmap para Q3. Hoy OneMore está enfocado en Apple HIG — el soporte para Material Design
+                llega después.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-r>
+          <button class="faq-q" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+            <span>¿Se actualiza con cada WWDC?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <div class="faq-a-in">
+              <p>Por ahora es manual — el equipo actualiza las reglas después de cada WWDC. Un modelo de
+                actualización impulsado por la comunidad está en el roadmap.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-r>
+          <button class="faq-q" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+            <span>¿Puedo usarlo en proyectos comerciales?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <div class="faq-a-in">
+              <p>Sí. Licencia MIT, sin restricciones — úsalo en cualquier proyecto, personal o comercial.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item" data-r>
+          <button class="faq-q" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+            <span>¿En qué se diferencia de solo pedirle a Claude que siga las HIG?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M12 5v14M5 12h14" />
+            </svg>
+          </button>
+          <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <div class="faq-a-in">
+              <p>Contexto persistente. 34 CSVs de datos específicos, con el razonamiento incluido — no depende de la
+                memoria del modelo ni se degrada entre sesiones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ CTA ═══ -->
     <section class="cta" id="ctaSec">
       <div class="cta-glow" aria-hidden="true"></div>
@@ -3734,6 +3939,23 @@
           btn.setAttribute('aria-expanded', 'false');
           btn.focus();
         }
+      });
+
+      // FAQ accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const q = item.querySelector('.faq-q');
+        q.addEventListener('click', () => {
+          const wasOpen = item.classList.contains('open');
+          faqItems.forEach(other => {
+            other.classList.remove('open');
+            other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          });
+          if (!wasOpen) {
+            item.classList.add('open');
+            q.setAttribute('aria-expanded', 'true');
+          }
+        });
       });
 
       // Stars canvas
